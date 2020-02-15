@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitApi", "RabbitApi\RabbitApi.csproj", "{9B45A7EF-A678-4A64-9346-3C3775C5B743}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B45A7EF-A678-4A64-9346-3C3775C5B743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B45A7EF-A678-4A64-9346-3C3775C5B743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B45A7EF-A678-4A64-9346-3C3775C5B743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B45A7EF-A678-4A64-9346-3C3775C5B743}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C53DBD6-9AEC-4C67-9357-937B686F9B9C}
+	EndGlobalSection
+EndGlobal
