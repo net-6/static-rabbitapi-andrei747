@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace RabbitApi.Models
 {
@@ -9,8 +11,8 @@ namespace RabbitApi.Models
     {
         public enum Gender
         {
-            Male,
-            Female
+            Male ,
+            Female 
         }
         public enum FurColors
         {
@@ -21,19 +23,21 @@ namespace RabbitApi.Models
         }
         public enum EyeColors
         {
-            Blue,
-            Black,
+            Blue ,
+            Black ,
             Red 
         }
 
-        private FurColors furColor;
-        private EyeColors eyeColor;
-        private Gender gender;
-        private readonly DateTime dateOfBirth;
-        public Rabbit(FurColors furColors, EyeColors eyeColor, Gender gender)
-        {
-            dateOfBirth = DateTime.Now;
-        }
+
+        [Required]
+        
+        public FurColors furColor { get; set; }
+        public EyeColors eyeColor { get; set; }
+        public Gender gender { get; set; }
+        public DateTime dateOfBirth { get; set; }
+
+     
+
         public void Move()
         {
             Console.WriteLine("The rabbit is moving left and right like crazy.");
@@ -49,6 +53,11 @@ namespace RabbitApi.Models
         public int Age
         {
             get { return (DateTime.Now - dateOfBirth).Days / 365; }
+        }
+
+        public override string ToString()
+        {
+            return $" furcoor:{furColor}, eyecolor:{eyeColor},gender:{gender}, age:{Age}";
         }
     }
 }

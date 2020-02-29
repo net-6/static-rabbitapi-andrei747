@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RabbitApi.Models;
+
 
 namespace RabbitApi.Controllers
 {
@@ -11,14 +13,32 @@ namespace RabbitApi.Controllers
     [ApiController]
     public class RabbitController : ControllerBase
     {
+        List<Rabbit> rabbits = new List<Rabbit>();
+        public RabbitController() 
+        { 
+        
+           Rabbit r1 = new Rabbit()
+           {
+
+
+            furColor = Rabbit.FurColors.Black,
+            eyeColor = Rabbit.EyeColors.Black,
+            gender = Rabbit.Gender.Male,
+            dateOfBirth = new DateTime(2000, 11, 11)
+
+           };
+            r1.ToString();
+            rabbits.Add(r1);
+        
+
+        }
         // GET: api/Rabbit
         [HttpGet]
-        public IEnumerable <Models.Rabbit> Get()
+        public IEnumerable<Rabbit> Get()
         {
-            Models.Rabbit r1 = new Models.Rabbit(Models.Rabbit.FurColors.Black, Models.Rabbit.EyeColors.Black, Models.Rabbit.Gender.Male);
-            List<Models.Rabbit> rabbits = new List<Models.Rabbit>();
-            rabbits.Add(r1);
+
             return rabbits;
+
         }
 
         // GET: api/Rabbit/5
@@ -30,8 +50,10 @@ namespace RabbitApi.Controllers
 
         // POST: api/Rabbit
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Models.Rabbit model)
         {
+
+
         }
 
         // PUT: api/Rabbit/5
